@@ -4,6 +4,14 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
+    async rewrites() {
+        return [
+            {
+                source: '/api/:path*',
+                destination: '/api/:path*',
+            },
+        ]
+    },
 };
 
 export default nextConfig;
